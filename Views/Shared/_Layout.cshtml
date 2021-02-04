@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewBag.title</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="icon" href="~/JoelHilton.jpg" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <h1 class="title"><a asp-action="" class="title">@ViewBag.title</a></h1>
+            &nbsp
+            &nbsp
+            &nbsp
+            <a asp-action="MovieDataBaseView">Movie Collection</a> <!-- add the linking elemant later when the controls are made -->
+            &nbsp
+            &nbsp
+            &nbsp
+            <a asp-action="Add">Movie Additions</a> <!-- add the linking elemant later when the controls are made -->
+            &nbsp
+            &nbsp
+            &nbsp
+            <a asp-action="Podcasts">My Podcasts</a> <!-- add the linking elemant later when the controls are made -->
+        </nav>
+    </header>
+    <div class="container movie">
+        <main>
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2021 - assignment_3
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

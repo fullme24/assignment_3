@@ -1,0 +1,55 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewBag.title = "The Joel Hilton Film Collection";
+}
+
+@model IEnumerable<assignment_3.Models.Add>
+
+<div class="data">
+    <table>
+        <thead>
+            <tr>
+                <th>Category</th>
+                &nbsp
+                &nbsp
+                <th>Title</th>
+                &nbsp
+                &nbsp
+                <th>Year</th>
+                &nbsp
+                &nbsp
+                <th>Director</th>
+                &nbsp
+                &nbsp
+                <th>Rating</th>
+                &nbsp
+                &nbsp
+                <th>Edited</th>
+                &nbsp
+                &nbsp
+                <th>Lent_to</th>
+                &nbsp
+                &nbsp
+                <th>Notes</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach (assignment_3.Models.Add c in Model)
+            {
+                <tr>
+                    <td>@c.Category</td>
+                    <td>@c.Title</td>
+                    <td>@c.Year</td>
+                    <td>@c.Director</td>
+                    <td>@c.Rating</td>
+                    <td>@c.Edited</td>
+                    <td>@c.Lent_to</td>
+                    <td>@c.Notes</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
